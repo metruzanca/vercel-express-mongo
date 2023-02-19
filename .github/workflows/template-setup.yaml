@@ -1,5 +1,7 @@
 name: After github template is used
 
+# Thanks to: https://github.com/actions/toolkit/issues/1054#issuecomment-1142634600
+
 on:
   # This event triggers on initial creation of new repo from github template
   push:
@@ -9,6 +11,8 @@ on:
 jobs:
   remove-and-commit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -22,14 +26,18 @@ jobs:
         rm assets/urls.png
       shell: bash
 
-    - name: Commit changes
-      run: |
-        git config --global user.name "Sam Zanca"
-        git config --global user.email "sam@zanca.dev"
-        git commit -am "Cleaned up the template for you! <3"
-      shell: bash
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Commit Changes
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: "Cleaned up the template for you! <3"
+    # - name: Commit changes
+    #   run: |
+    #     git config --global user.name "Sam Zanca"
+    #     git config --global user.email "sam@zanca.dev"
+    #     git commit -am "Cleaned up the template for you! <3"
+    #   shell: bash
+
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
