@@ -42,7 +42,14 @@ npm install -g vercel
 vercel login
 ```
 
-### 4. Additional Config
+Once logged in, you can link the local repository with the project we just added to vercel.
+
+```bash
+vercel link
+```
+
+
+### 4. Configuration
 Once you've got your project added on vercel, go to the dashboard of the project we've just deployed. You should see this section below an image preview:
 
 ![](.github/assets/urls.png)
@@ -62,13 +69,7 @@ Once you're happy with the url, copy that and put it in the following places:
 
 
 ### 5. Profit - Nice!
-For local development, first you'll need to link the projec to vercel:
-
-```bash
-vercel link
-```
-
-Then you can just run the dev server via:
+For local development, you can just run the dev server via:
 
 ```bash
 npm start
@@ -79,7 +80,7 @@ npm start
 
 On every commit to the main branch, vercel will deploy a new version.
 
-## Vercel Requirements
+## Vercel Requirements [[Docs](v-express)]
 Expressjs will not run unless the following requirements are met:
 - There must be an `api/` folder in the root...
 - ...with an `index.js` file inside...
@@ -93,6 +94,8 @@ Since ExpressJS will be running in a serverless environment, you need to make su
 - **Do** close any database connections you open. (see next section)
 
 ## Using a Database
+In this section you'll configure both your Development Server and Deployment to be able to connect to mongoDB Atlas.
+
 Since we're not allowed to have long running connections I've made a middleware that gives you a clear place to run functions for connecting and disconnecting to the database. Its simple to use, see comments in the [index.js](cleanup-callback).
 
 To use MongoDB Atlas, first [create your account](atlas-signup). Once you've verified your account it'll prompt you to create your mongo instance. Make sure to select the free tier.
@@ -107,25 +110,21 @@ Once thats done, on the left side panel, under `Deployment` click `Database`. On
 
 It should be something like `mongodb+srv://samzanca:<password>@<instance>.mongodb.net/test`.
 
-Now, head to the [vercel dashboard](v-dash) for your newly added project and go to `Settings>Environment Variables` and set `DATABASE_URL` to our connection string. (Make sure to replace `<password>` with the password of the user we just created)
+Copy **your** connection string and read on in the next section.
 
-Check the boxes for `Production` and `Development` and click `Save`.
+### Adding Environment Variables [[Docs](v-env)]
+Head over to the [vercel dashboard](v-dash) for your newly added project and go to `Settings>Environment Variables`. Here you can add strings you want to remain secret e.g. the `DATABASE_URL` or a third party `API_KEY`.
 
-Now, both your Development Server and Deployment will be able to connect to mongoDB Atlas.
+Make sure to check off the boxes for `Production` and `Development` and click `Save` when you're done.
 
-### Adding a frontend
+### Adding a frontend [[Docs](v-frontend)]
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
 
-
-
----
-
-### Resources
 > This repo was based on vercel documentation: [ExpressJS](v-express)
 
-- [Adding a frontend](v-frontend)
-- [Adding websockets](v-realtime) (Ably has a great free tier)
-- [Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables)
+---
+### Other Resources
+- [Adding websockets w/ vercel](v-realtime)
 
 <!-- URLS -->
 
@@ -141,6 +140,7 @@ Simply just create a `public` folder and put your static files in there. No expr
 [v-frontend]: https://vercel.com/guides/using-express-with-vercel#adding-a-public-directory
 [v-realtime]: https://vercel.com/guides/publish-and-subscribe-to-realtime-data-on-vercel
 [v-dash]: https://vercel.com/dashboard
+[v-env]: https://vercel.com/docs/concepts/projects/environment-variables
 
 <!-- Using this repo -->
 [template]: https://custom-icon-badges.demolab.com/badge/-Use%20Template-238636?style=for-the-badge&logo=repo-template&logoColor=white
