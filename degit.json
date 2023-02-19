@@ -3,8 +3,10 @@
     "action": "remove",
     "files": [
       "readme.md",
-      ".github/template-setup.yaml",
-      "assets/add-vercel-project.gif"
+      ".github/workflows/template-setup.yaml",
+      "assets/add-vercel-project.gif",
+      "assets/about-url.png",
+      "assets/urls.png"
     ]
   }
 ]

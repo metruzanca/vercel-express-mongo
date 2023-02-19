@@ -1,0 +1,36 @@
+name: After github template is used
+
+on:
+  # This event triggers on initial creation of new repo from github template
+  push:
+    branches:
+      - '**'
+
+jobs:
+  remove-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Remove files
+      run: |
+        rm 
+        rm readme.md
+        rm .github/workflows/template-setup.yaml
+        rm assets/add-vercel-project.gif
+        rm assets/about-url.png
+        rm assets/urls.png
+      shell: bash
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "Sam Zanca"
+        git config --global user.email "sam@zanca.dev"
+        git commit -am "Cleaned up the template for you! <3"
+      shell: bash
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}

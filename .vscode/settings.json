@@ -1,0 +1,10 @@
+{
+  "rest-client.environmentVariables": {
+    "local": {
+      "host": "http://localhost:8080",
+    },
+    "vercel": {
+      "host": "https://example.com",
+    }
+  }
+}
