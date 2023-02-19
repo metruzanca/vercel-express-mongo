@@ -21,7 +21,7 @@ _You might need to refresh the page..._
 
 Once its complete, you should see this commit:
 
-![](assets/workflow-commit.png)
+![](.github/assets/workflow-commit.png)
 
 > You can also use [degit](degit) via `npx degit metruzanca/ga-vercel-demo` if you prefer.
 
@@ -30,7 +30,7 @@ The process could not be easier.
 
 Heres a gif showing the 4 clicks you need to do.
 
-![](./assets/add-vercel-project.gif)
+![](.github/assets/add-vercel-project.gif)
 
 Once you're logged in, install the vercel CLI and login
 
@@ -45,7 +45,7 @@ vercel login
 ### 4. Additional Config
 Once you've got your project added on vercel, go to the dashboard of the project we've just deployed. You should see this section below an image preview:
 
-![](./assets/urls.png)
+![](.github/assets/urls.png)
 
 The deployment url is specific to the commit, meanwhile the domain(s) url is always the lastest deployment. We're interested in the latest.
 
@@ -56,7 +56,7 @@ Once you're happy with the url, copy that and put it in the following places:
 - In `.vscode/settings.json`, put that url in `vercel.host` making sure its in this format: `https://custom-url.vercel.app`.
 - On `https://github.com/your-username-here/project-name-here/` change the about  section for the repository to the URL as the "website" option.
 
-![](./assets/about-url.png)
+![](.github/assets/about-url.png)
 
 > If you rename your app later, remember to change it here as well.
 
@@ -97,7 +97,7 @@ Since we're not allowed to have long running connections I've made a middleware 
 
 To use MongoDB Atlas, first [create your account](atlas-signup). Once you've verified your account it'll prompt you to create your mongo instance. Make sure to select the free tier.
 
-![](./assets/atlas.png)
+![](.github/assets/atlas.png)
 
 Once thats done, follow the guide on mongodb.com for setting up  your database.
 

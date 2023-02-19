@@ -20,12 +20,7 @@ jobs:
     - name: Remove files
       run: |
         rm readme.md
-        rm .github/workflows/template-setup.yaml
-        rm assets/add-vercel-project.gif
-        rm assets/about-url.png
-        rm assets/urls.png
-        rm assets/workflow-commit.png
-        rm assets/atlas.png
+        rm -r .github/
         rm degit.json
         echo "> [Template Used](https://github.com/metruzanca/ga-vercel-demo)" >> readme.md
       shell: bash

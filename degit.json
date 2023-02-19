@@ -3,12 +3,7 @@
     "action": "remove",
     "files": [
       "readme.md",
-      ".github/workflows/template-setup.yaml",
-      "assets/add-vercel-project.gif",
-      "assets/about-url.png",
-      "assets/urls.png",
-      "assets/workflow-commit.png",
-      "assets/atlas.png"
+      ".github/"
     ]
   }
 ]
