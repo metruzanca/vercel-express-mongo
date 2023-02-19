@@ -17,7 +17,7 @@ app.use(lifecycle({
 }))
 
 // Feel free to use a router and move this elsewhere.
-app.get('/api', (req, res) => {
+app.get('/api', async (req, res) => {
   console.log(process.env.DATABASE_URL);
   res.json({
     message: 'Hello World',
