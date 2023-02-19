@@ -6,12 +6,12 @@ const app = express()
 app.use(lifecycle({
   async setup() {
     console.log('Before handler');
-    // Put your database connection here.
+    // Put your database connection here. e.g.
     // await mongoose.connect(process.env.DATABASE_URL)
   },
   async cleanup() {
     console.log("After handler");
-    // Put your database disconnection here.
+    // Put your database disconnection here. e.g.
     // await mongoose.disconnect()
   }
 }))
