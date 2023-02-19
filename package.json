@@ -5,8 +5,8 @@
   "main": "api/index.js",
   "scripts": {
     "postinstall": "cp -up .env.example .env",
-    "start": "vercel dev",
-    "env":"vercel env pull .env"
+    "prestart":"vercel env pull .env",
+    "start": "vercel dev"
   },
   "license": "MIT",
   "dependencies": {

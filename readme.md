@@ -99,7 +99,19 @@ To use MongoDB Atlas, first [create your account](atlas-signup). Once you've ver
 
 ![](.github/assets/atlas.png)
 
-Once thats done, follow the guide on mongodb.com for setting up  your database.
+Once thats done, follow the guided setup provided by mongodb.com for creating your database user. Make sure to save the password as we'll need that.
+
+In the guided section, there should be an IP option, add: `0.0.0.0` (which is a catch all).
+
+Once thats done, on the left side panel, under `Deployment` click `Database`. On that page, click `Connect` then `Connect using mongoDB Compass` and copy the connection string.
+
+It should be something like `mongodb+srv://samzanca:<password>@<instance>.mongodb.net/test`.
+
+Now, head to the [vercel dashboard](v-dash) for your newly added project and go to `Settings>Environment Variables` and set `DATABASE_URL` to our connection string. (Make sure to replace `<password>` with the password of the user we just created)
+
+Check the boxes for `Production` and `Development` and click `Save`.
+
+Now, both your Development Server and Deployment will be able to connect to mongoDB Atlas.
 
 ### Adding a frontend
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
@@ -128,6 +140,7 @@ Simply just create a `public` folder and put your static files in there. No expr
 [v-express]: https://vercel.com/guides/using-express-with-vercel#standalone-express
 [v-frontend]: https://vercel.com/guides/using-express-with-vercel#adding-a-public-directory
 [v-realtime]: https://vercel.com/guides/publish-and-subscribe-to-realtime-data-on-vercel
+[v-dash]: https://vercel.com/dashboard
 
 <!-- Using this repo -->
 [template]: https://custom-icon-badges.demolab.com/badge/-Use%20Template-238636?style=for-the-badge&logo=repo-template&logoColor=white
