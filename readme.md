@@ -117,7 +117,7 @@ Head over to the [vercel dashboard][v-dash] for your newly added project and go 
 
 Make sure to check off the boxes for `Production` and `Development` and click `Save` when you're done.
 
-### Adding a frontend [[Docs][v-frontend]
+### Adding a frontend [[Docs][v-frontend]]
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
 
 > This repo was based on vercel documentation: [ExpressJS][v-express]
