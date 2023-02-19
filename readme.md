@@ -1,8 +1,3 @@
-### TODO
-- [ ] Environment Variables / Database Usage Explained
-- [ ] `vercel dev` for local development
- - [ ] Test rest client
-
 # Deploying Expressjs to Vercel
 
 Vercel is a great platform for deploying both frontend and serverless backend applications. Vercel provides industry leading dev tooling with a great integration with github, making continuous deployment easy.
@@ -58,6 +53,8 @@ Once you're happy with the url, copy that and put it in the following places:
 
 ### 5. Profit - Nice!
 
+TODO Test this and rest client
+
 For local development, run the dev server via:
 
 ```bash
@@ -82,6 +79,11 @@ Since ExpressJS will be running in a serverless environment, you need to make su
 ### Using a Database (Environment Variables)
 - To make this part easier, I made a middleware [`api/lib/cleanup.js`](./api/lib/cleanup.js). Its simple to use, see comments in [index.js](cleanup-callback)
 
+TODO content here
+
+### Adding a frontend
+
+Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
 
 [cleanup-callback]: https://github.com/metruzanca/ga-vercel-demo/blob/main/api/index.js#L13-L15
 

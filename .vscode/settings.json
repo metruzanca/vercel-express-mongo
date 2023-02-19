@@ -4,7 +4,7 @@
       "host": "http://localhost:8080",
     },
     "vercel": {
-      "host": "https://example.com",
+      "host": "https://ga-vercel-demo.vercel.app",
     }
   }
 }

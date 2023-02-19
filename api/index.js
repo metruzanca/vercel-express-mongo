@@ -1,7 +1,6 @@
-// const express = require("express");
+import 'dotenv/config' // This loads environment variables, keep this
 import express from "express"
-import cleanup from "./lib/cleanup"
-import 'dotenv/config'
+import cleanup from "./middleware/cleanup.js"
 
 const app = express()
 
@@ -15,5 +14,4 @@ app.use(cleanup(() => {
 }))
 
 // Don't use app.listen. Instead export app.
-// module.exports = app;
 export default app
