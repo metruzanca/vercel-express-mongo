@@ -122,6 +122,16 @@ Simply just create a `public` folder and put your static files in there. No expr
 
 > This repo was based on vercel documentation: [ExpressJS][v-express]
 
+## Eslint
+Lets start keeping things clean. This template comes with eslint pre-configured for you.
+
+With the eslint extension, you can enable running eslint on save with:
+```json
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+},
+```
+
 ---
 ### Other Resources
 - [Adding websockets w/ vercel][v-realtime]

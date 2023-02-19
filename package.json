@@ -5,7 +5,7 @@
   "main": "api/index.js",
   "scripts": {
     "postinstall": "cp -up .env.example .env",
-    "prestart":"vercel env pull .env",
+    "prestart": "vercel env pull .env",
     "start": "vercel dev"
   },
   "license": "MIT",
@@ -13,6 +13,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "eslint": "^8.34.0",
     "nodemon": "^2.0.20",
     "vercel": "^28.16.2"
   }
