@@ -15,7 +15,6 @@ jobs:
 
     - name: Remove files
       run: |
-        rm 
         rm readme.md
         rm .github/workflows/template-setup.yaml
         rm assets/add-vercel-project.gif

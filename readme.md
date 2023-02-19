@@ -23,6 +23,8 @@ I would recommend using the `Continue with github` option as it will auto connec
 
 You can either Click this [![use this template][template]][generate] (_or use the button at the top of the page_)
 
+Once you've used the template, you'll have to wait for the github action to finish
+
 > You can also use [degit](degit) via `npx degit metruzanca/ga-vercel-demo` if you prefer.
 
 ### 3. Adding the project to Vercel
