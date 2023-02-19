@@ -4,12 +4,12 @@ Vercel is a great platform for deploying both frontend and serverless backend ap
 In this guide you'll learn how to deploy an ExpressJS app to vercel running as a serverless app.
 
 > **Note!**:
-> - When express is running on vercel, it is running in a serverless environment which makes this deployment not suitable for things like websockets or other long-lasting / stateful backends. (Still need it? [Heres how you can](v-realtime)).
-> - You cannot host a database on vercel, meaning you'll be relagated to something like [MongoDB Atlas](mongodb-atlas), [Firebase](firebase), [supabase](supabase) which all have free tiers or some other paid database option.
+> - When express is running on vercel, it is running in a serverless environment which makes this deployment not suitable for things like websockets or other long-lasting / stateful backends. (Still need it? [Heres how you can][v-realtime]).
+> - You cannot host a database on vercel, meaning you'll be relagated to something like [MongoDB Atlas][mongodb-atlas], [Firebase][firebase], [supabase][supabase] which all have free tiers or some other paid database option.
 
 ## Lets Get started!
 
-### 1. Setting up [Vercel](v-signup) Account
+### 1. Setting up [Vercel][v-signup] Account
 I would recommend using the `Continue with github` option as it will auto connect your github to vercel. Security wise, you'll also just need to keep your github locked down and won't have to worry about vercel. (_You should have 2FA enabled on github_)
 
 ### 2. Using this template
@@ -23,7 +23,7 @@ Once its complete, you should see this commit:
 
 ![](.github/assets/workflow-commit.png)
 
-> You can also use [degit](degit) via `npx degit metruzanca/ga-vercel-demo` if you prefer.
+> You can also use [degit][degit] via `npx degit metruzanca/ga-vercel-demo` if you prefer.
 
 ### 3. Adding the project to Vercel
 The process could not be easier.
@@ -80,7 +80,7 @@ npm start
 
 On every commit to the main branch, vercel will deploy a new version.
 
-## Vercel Requirements [[Docs](v-express)]
+## Vercel Requirements [[Docs][v-express]]
 Expressjs will not run unless the following requirements are met:
 - There must be an `api/` folder in the root...
 - ...with an `index.js` file inside...
@@ -96,9 +96,9 @@ Since ExpressJS will be running in a serverless environment, you need to make su
 ## Using a Database
 In this section you'll configure both your Development Server and Deployment to be able to connect to mongoDB Atlas.
 
-Since we're not allowed to have long running connections I've made a middleware that gives you a clear place to run functions for connecting and disconnecting to the database. Its simple to use, see comments in the [index.js](cleanup-callback).
+Since we're not allowed to have long running connections I've made a middleware that gives you a clear place to run functions for connecting and disconnecting to the database. Its simple to use, see comments in the [index.js][cleanup-callback].
 
-To use MongoDB Atlas, first [create your account](atlas-signup). Once you've verified your account it'll prompt you to create your mongo instance. Make sure to select the free tier.
+To use MongoDB Atlas, first [create your account][atlas-signup]. Once you've verified your account it'll prompt you to create your mongo instance. Make sure to select the free tier.
 
 ![](.github/assets/atlas.png)
 
@@ -112,19 +112,19 @@ It should be something like `mongodb+srv://samzanca:<password>@<instance>.mongod
 
 Copy **your** connection string and read on in the next section.
 
-### Adding Environment Variables [[Docs](v-env)]
-Head over to the [vercel dashboard](v-dash) for your newly added project and go to `Settings>Environment Variables`. Here you can add strings you want to remain secret e.g. the `DATABASE_URL` or a third party `API_KEY`.
+### Adding Environment Variables [[Docs][v-env]]
+Head over to the [vercel dashboard][v-dash] for your newly added project and go to `Settings>Environment Variables`. Here you can add strings you want to remain secret e.g. the `DATABASE_URL` or a third party `API_KEY`.
 
 Make sure to check off the boxes for `Production` and `Development` and click `Save` when you're done.
 
-### Adding a frontend [[Docs](v-frontend)]
+### Adding a frontend [[Docs][v-frontend]
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
 
-> This repo was based on vercel documentation: [ExpressJS](v-express)
+> This repo was based on vercel documentation: [ExpressJS][v-express]
 
 ---
 ### Other Resources
-- [Adding websockets w/ vercel](v-realtime)
+- [Adding websockets w/ vercel][v-realtime]
 
 <!-- URLS -->
 
