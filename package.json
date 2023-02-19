@@ -5,11 +5,11 @@
   "main": "api/index.js",
   "scripts": {
     "postinstall": "cp -up .env.example .env",
-    "start": ""
+    "start": "vercel dev",
+    "env":"vercel env pull .env"
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
   "devDependencies": {

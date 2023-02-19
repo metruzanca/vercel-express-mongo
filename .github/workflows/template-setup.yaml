@@ -24,6 +24,8 @@ jobs:
         rm assets/add-vercel-project.gif
         rm assets/about-url.png
         rm assets/urls.png
+        rm assets/workflow-commit.png
+        rm assets/atlas.png
         rm degit.json
         echo "> [Template Used](https://github.com/metruzanca/ga-vercel-demo)" >> readme.md
       shell: bash
