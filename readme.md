@@ -91,7 +91,7 @@ If all these requirements are met, you can use all the expressjs ergonomics you'
 
 Since ExpressJS will be running in a serverless environment, you need to make sure theres no long running processes running:
 - **Don't** run `app.listen` in your index.js file as Vercel will do that for you. 
-- **Do** close any database connections you open. (see next section)
+- **Do** close any database connections you open. (See comments in [index.js][db-connection] for details)
 
 ## Using a Database
 In this section you'll configure both your Development Server and Deployment to be able to connect to mongoDB Atlas.
@@ -159,3 +159,4 @@ With the eslint extension, you can enable running eslint on save with:
 
 <!-- Other -->
 [cleanup-callback]: https://github.com/metruzanca/ga-vercel-demo/blob/main/api/index.js#L13-L15
+[db-connection]: https://github.com/metruzanca/ga-vercel-demo/blob/main/api/index.js#L6-L17
