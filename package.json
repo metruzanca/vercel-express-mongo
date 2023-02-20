@@ -4,7 +4,6 @@
   "type": "module",
   "main": "api/index.js",
   "scripts": {
-    "postinstall": "cp -up .env.example .env",
     "prestart": "vercel env pull .env",
     "start": "vercel dev"
   },
