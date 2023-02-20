@@ -32,7 +32,7 @@ Heres a gif showing the 4 clicks you need to do.
 
 ![](.github/assets/add-vercel-project.gif)
 
-Once you're logged in, install the vercel CLI and login
+Once you've added the project on the dashboard, install the vercel CLI and login
 
 ```bash
 npm install -g vercel
