@@ -113,9 +113,13 @@ It should be something like `mongodb+srv://samzanca:<password>@<instance>.mongod
 Copy **your** connection string and read on in the next section.
 
 ### Adding Environment Variables [[Docs][v-env]]
-Head over to the [vercel dashboard][v-dash] for your newly added project and go to `Settings>Environment Variables`. Here you can add strings you want to remain secret e.g. the `DATABASE_URL` or a third party `API_KEY`.
+Head over to the [vercel dashboard][v-dash] for your newly added project and go to `Settings>Environment Variables`.
 
-Make sure to check off the boxes for `Production` and `Development` and click `Save` when you're done.
+Here you can add strings you want to remain secret e.g. the `DATABASE_URL` or a third party `API_KEY`.
+
+For the `DATABASE_URL` specifically, check the `Production` checkbox. Add another `DATABASE_URL` for `Development`, this should be something like `mongodb://localhost/test`.
+
+Once you're done, click save to save your newly added env vars.
 
 ### Adding a frontend [[Docs][v-frontend]]
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
