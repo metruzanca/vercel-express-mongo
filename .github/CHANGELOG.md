@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.2] - 2023-02-22
+
+### Added
+Added a vercel.json which, as it turns out, is required for custom routes.
+
 ## [0.1.1] - 2023-02-21
 
 ### Added
