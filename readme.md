@@ -121,6 +121,11 @@ For the `DATABASE_URL` specifically, check the `Production` checkbox. Add anothe
 
 Once you're done, click save to save your newly added env vars.
 
+### Seeding
+Since we can't simply import our seed file into our index.js, as that would make it run every time we get a request, to see our app we will need a way to make sure our seed gets run only once. Vercel automatically runs build scripts on start, so we can take advantage of this to run our seed file.
+
+> In the latest version of this template, this will already be setup for you. If you're on an old version, see [seeding](./.github/issues/seeding.md)
+
 ### Adding a frontend [[Docs][v-frontend]]
 Simply just create a `public` folder and put your static files in there. No express configuration needed as this folder is handleded by vercel instead.
 
@@ -131,12 +136,19 @@ Lets start keeping things clean. This template comes with eslint pre-configured 
 
 With the eslint extension, you can enable running eslint on save with:
 ```json
+// Add this to the vscode settings JSON file
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 },
 ```
 
 ---
+### FAQ
+- [`process.env.DATABASE_URL` has a red underline](./.github/issues/processEnv.md)
+- [`assert { type: 'json' }` has a red underline](./..github/issues/eslintAssert.md)
+- [Seeding](./..github/issues/seeding.md)
+
+
 ### Other Resources
 - [Adding websockets w/ vercel][v-realtime]
 
