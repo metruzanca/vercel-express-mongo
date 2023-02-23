@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.3] - 2023-02-23
+### Added
+Added morgan for simple request logging
+
 ## [0.1.2] - 2023-02-22
 
 ### Added
