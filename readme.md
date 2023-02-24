@@ -32,6 +32,8 @@ Heres a gif showing the 4 clicks you need to do.
 
 ![](.github/assets/add-vercel-project.gif)
 
+> NOTE: If the deploy fails, that doesn't matter. All we need is for the project to be on vercel. Once we finish this guide, it will no longer be failing.
+
 Once you've added the project on the dashboard, install the vercel CLI and login
 
 ```bash
