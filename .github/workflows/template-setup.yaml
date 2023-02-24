@@ -20,9 +20,9 @@ jobs:
     - name: Remove files
       run: |
         rm readme.md
+        mv .github/readme.md readme.md
         rm -r .github/
         rm degit.json
-        echo "> [Template Used](https://github.com/metruzanca/ga-vercel-demo)" >> readme.md
       shell: bash
 
     - name: Commit Changes
