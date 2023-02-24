@@ -8,6 +8,7 @@ if (process.env.DATABASE_URL === undefined) {
 // Leave these 4 lines
 //@ts-ignore
 mongoose.connect(process.env.DATABASE_URL)
+mongoose.set('strictQuery', false)
 await seed()
 await mongoose.disconnect()
 

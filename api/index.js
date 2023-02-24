@@ -9,6 +9,7 @@ app.use(lifecycle({
   async setup() {
     // This runs before all your handlers
     // Put your database connection here. e.g.
+    // mongoose.set('strictQuery', false)
     // await mongoose.connect(process.env.DATABASE_URL)
   },
   async cleanup() {
