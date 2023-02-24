@@ -20,7 +20,7 @@ jobs:
     - name: Remove files
       run: |
         rm readme.md
-        mv .github/readme.md readme.md
+        mv .github/template-readme.md readme.md
         rm -r .github/
         rm degit.json
       shell: bash
